@@ -89,6 +89,19 @@ class XianyuSource(BaseSource):
             return
         with open(cookie_path) as f:
             cookies = json.load(f)
+        # 规范化 sameSite 值（playwright 只接受 Strict/Lax/None）
+        same_site_map = {
+            "no_restriction": "None",
+            "lax": "Lax",
+            "strict": "Strict",
+            "unspecified": "Lax",
+        }
+        for c in cookies:
+            ss = c.get("sameSite", "").lower() if c.get("sameSite") else ""
+            if ss in same_site_map:
+                c["sameSite"] = same_site_map[ss]
+            elif ss and ss not in ("strict", "lax", "none"):
+                c["sameSite"] = "Lax"
         await context.add_cookies(cookies)
 
     async def _extract_products(self, page, limit: int) -> List[Dict[str, Any]]:
