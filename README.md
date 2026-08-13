@@ -207,6 +207,7 @@ sourcing-agent/
 
 - **GitHub**: [@itr-del](https://github.com/itr-del)
 - **项目主页**: https://github.com/itr-del/sourcing-agent
+- **邮箱**: 13918029394@163.com
 
 ---
 
