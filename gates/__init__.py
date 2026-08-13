@@ -1,5 +1,5 @@
 """
-gates/__init__.py — TRIOI 革新 2：5 道门禁（拓扑依赖 DAG）
+gates/__init__.py — 核心创新 2：5 道门禁（拓扑依赖 DAG）
 
 门禁拓扑图：
                 C1 语法门禁    C2 引用门禁

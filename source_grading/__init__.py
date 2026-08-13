@@ -1,5 +1,5 @@
 """
-source_grading/__init__.py — TRIOI 革新 4：信源分级 S/A/B/C/D
+source_grading/__init__.py — 核心创新 4：信源分级 S/A/B/C/D
 
 等级定义：
 - S 级：制度性信源（央媒、政府、学术、官方）

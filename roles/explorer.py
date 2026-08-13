@@ -1,5 +1,5 @@
 """
-roles/explorer.py — TRIOI 革新 1：认知隔离（独立 session）
+roles/explorer.py — 核心创新 1：认知隔离（独立 session）
 
 Explorer = 数据收集角色
 职责：调度多个 MCP 数据源，收集商品 + 原始信息
@@ -15,7 +15,7 @@ logger = logging.getLogger(__name__)
 
 
 class Explorer:
-    """TRIOI Explorer — 数据收集（独立 session）"""
+    """本项目 Explorer — 数据收集（独立 session）"""
 
     def __init__(self):
         self.registry = get_registry()

@@ -355,5 +355,362 @@
     "rationale": "综合评分 0.605，基于 4 维度加权（关键词/价格/信用/质量），信心度 0.80。",
     "dissenting_opinions": [],
     "confidence": 0.8
+  },
+  {
+    "decision_id": "D010",
+    "timestamp": "2026-08-13T18:09:53.594129",
+    "task_id": "A01",
+    "phase": "Phase 1",
+    "role": "Integrator",
+    "context_snapshot": "BOM A01: 关键词「打窝船」,价格区间 [0, 9999]",
+    "options_considered": [
+      {
+        "label": "7.4V打窝船标准版【定速巡航】 赠送运费险 无忧售后工厂直",
+        "price": 220.0,
+        "score": 0.633
+      },
+      {
+        "label": "8.4伏二手打窝船，电池18000毫安，料仓可装4斤，390",
+        "price": 260.0,
+        "score": 0.611
+      },
+      {
+        "label": "全新 乐旗鱼打窝船 迷彩配色 成色：全新 未使用 配件：打窝",
+        "price": 268.0,
+        "score": 0.567
+      }
+    ],
+    "chosen": {
+      "label": "7.4V打窝船标准版【定速巡航】 赠送运费险 无忧售后工厂直",
+      "price": 220.0,
+      "score": 0.633,
+      "url": "https://www.goofish.com/item?id=1071473089980&categoryId=126856681"
+    },
+    "rationale": "综合评分 0.000，基于 4 维度加权（关键词/价格/信用/质量），信心度 0.93。",
+    "dissenting_opinions": [
+      "备选 8.4伏二手打窝船，电池18000毫安，料仓可装4斤，390 评分 0.61"
+    ],
+    "confidence": 0.933
+  },
+  {
+    "decision_id": "D011",
+    "timestamp": "2026-08-13T18:09:53.596069",
+    "task_id": "A01",
+    "phase": "Phase 1",
+    "role": "Integrator",
+    "context_snapshot": "信源评估: xianyu C2C, 数据完整度 5/5",
+    "options_considered": [
+      {
+        "label": "S",
+        "desc": "高信用企业店"
+      },
+      {
+        "label": "A",
+        "desc": "真实个人卖家"
+      },
+      {
+        "label": "B",
+        "desc": "普通 C2C"
+      }
+    ],
+    "chosen": {
+      "label": "A",
+      "reason": "v7 评分 0.63 > 0.6 阈值"
+    },
+    "rationale": "综合评分 0.000，基于 4 维度加权（关键词/价格/信用/质量），信心度 0.85。",
+    "dissenting_opinions": [],
+    "confidence": 0.85
+  },
+  {
+    "decision_id": "D012",
+    "timestamp": "2026-08-13T18:09:53.597648",
+    "task_id": "A03",
+    "phase": "Phase 1",
+    "role": "Integrator",
+    "context_snapshot": "BOM A03: 关键词「L298N」,价格区间 [0, 9999]",
+    "options_considered": [
+      {
+        "label": "ESP32-S3核心板开发板 板载ESP32-S3-N16R",
+        "price": 26.0,
+        "score": 0.674
+      },
+      {
+        "label": "全新小智ESP32 S3 N16R8核心板板载1-ESP32",
+        "price": 29.0,
+        "score": 0.643
+      },
+      {
+        "label": "全新小智ESP32 S3 N16R8核心板板载1-ESP32",
+        "price": 29.0,
+        "score": 0.643
+      }
+    ],
+    "chosen": {
+      "label": "ESP32-S3核心板开发板 板载ESP32-S3-N16R",
+      "price": 26.0,
+      "score": 0.674,
+      "url": "https://www.goofish.com/item?id=1004044317211&categoryId=126856549"
+    },
+    "rationale": "综合评分 0.000，基于 4 维度加权（关键词/价格/信用/质量），信心度 0.97。",
+    "dissenting_opinions": [
+      "备选 全新小智ESP32 S3 N16R8核心板板载1-ESP32 评分 0.64"
+    ],
+    "confidence": 0.974
+  },
+  {
+    "decision_id": "D013",
+    "timestamp": "2026-08-13T18:09:53.599535",
+    "task_id": "A03",
+    "phase": "Phase 1",
+    "role": "Integrator",
+    "context_snapshot": "信源评估: xianyu C2C, 数据完整度 5/5",
+    "options_considered": [
+      {
+        "label": "S",
+        "desc": "高信用企业店"
+      },
+      {
+        "label": "A",
+        "desc": "真实个人卖家"
+      },
+      {
+        "label": "B",
+        "desc": "普通 C2C"
+      }
+    ],
+    "chosen": {
+      "label": "A",
+      "reason": "v7 评分 0.67 > 0.6 阈值"
+    },
+    "rationale": "综合评分 0.000，基于 4 维度加权（关键词/价格/信用/质量），信心度 0.85。",
+    "dissenting_opinions": [],
+    "confidence": 0.85
+  },
+  {
+    "decision_id": "D014",
+    "timestamp": "2026-08-13T18:09:53.601300",
+    "task_id": "B05",
+    "phase": "Phase 1",
+    "role": "Integrator",
+    "context_snapshot": "BOM B05: 关键词「螺旋桨保护罩」,价格区间 [0, 9999]",
+    "options_considered": [
+      {
+        "label": "船模四叶螺旋桨 锌合金金属桨 正反55mm拉网船打窝船金属螺",
+        "price": 43.0,
+        "score": 0.629
+      },
+      {
+        "label": "打窝船遥控船拉网船金属螺旋桨锌铝合金螺旋桨 处理直径55mm",
+        "price": 43.0,
+        "score": 0.629
+      },
+      {
+        "label": "电动船桨 正反2mm 三叶螺旋桨 船桨DIY船模螺旋桨 直径",
+        "price": 8.0,
+        "score": 0.492
+      }
+    ],
+    "chosen": {
+      "label": "船模四叶螺旋桨 锌合金金属桨 正反55mm拉网船打窝船金属螺",
+      "price": 43.0,
+      "score": 0.629,
+      "url": "https://www.goofish.com/item?id=983630636348&categoryId=126856935"
+    },
+    "rationale": "综合评分 0.000，基于 4 维度加权（关键词/价格/信用/质量），信心度 0.93。",
+    "dissenting_opinions": [
+      "备选 打窝船遥控船拉网船金属螺旋桨锌铝合金螺旋桨 处理直径55mm 评分 0.63"
+    ],
+    "confidence": 0.929
+  },
+  {
+    "decision_id": "D015",
+    "timestamp": "2026-08-13T18:09:53.602718",
+    "task_id": "B05",
+    "phase": "Phase 1",
+    "role": "Integrator",
+    "context_snapshot": "信源评估: xianyu C2C, 数据完整度 5/5",
+    "options_considered": [
+      {
+        "label": "S",
+        "desc": "高信用企业店"
+      },
+      {
+        "label": "A",
+        "desc": "真实个人卖家"
+      },
+      {
+        "label": "B",
+        "desc": "普通 C2C"
+      }
+    ],
+    "chosen": {
+      "label": "A",
+      "reason": "v7 评分 0.63 > 0.6 阈值"
+    },
+    "rationale": "综合评分 0.000，基于 4 维度加权（关键词/价格/信用/质量），信心度 0.85。",
+    "dissenting_opinions": [],
+    "confidence": 0.85
+  },
+  {
+    "decision_id": "D016",
+    "timestamp": "2026-08-13T18:09:53.604170",
+    "task_id": "A01",
+    "phase": "Phase 1",
+    "role": "Integrator",
+    "context_snapshot": "Explorer 收集 5 个商品，Auditor 报告 5 个问题",
+    "options_considered": [
+      {
+        "rank": 1,
+        "title": "7.4V打窝船标准版【定速巡航】 赠送运费险 无忧售后工厂直发包邮 打窝船终身维修专人一船一检后24小时内发货拉网脱锚钩可选配电磁阀脱钩器款【电压】：7.4V大",
+        "score": 0.605,
+        "source": "xianyu",
+        "rationale": "价格 ¥220.0 · 信用 未知 · 想要数 0 · 来源 xianyu"
+      },
+      {
+        "rank": 2,
+        "title": "8.4伏二手打窝船，电池18000毫安，料仓可装4斤，390 高速电机，遥控距离500米，配件齐全，带遥控器，包邮！功能正常，成色还可以，钓鱼打窝用！不议价售出",
+        "score": 0.605,
+        "source": "xianyu",
+        "rationale": "价格 ¥260.0 · 信用 未知 · 想要数 0 · 来源 xianyu"
+      },
+      {
+        "rank": 3,
+        "title": "全新 乐旗鱼打窝船 迷彩配色 成色：全新 未使用 配件：打窝船一个、遥控器一个、14800毫安锂电池一块，原装天线一根、充电器一个、备用螺旋桨一对、拖钩丝一根、",
+        "score": 0.605,
+        "source": "xianyu",
+        "rationale": "价格 ¥268.0 · 信用 未知 · 想要数 0 · 来源 xianyu"
+      }
+    ],
+    "chosen": {
+      "source_id": "xianyu",
+      "title": "7.4V打窝船标准版【定速巡航】 赠送运费险 无忧售后工厂直发包邮 打窝船终身维修专人一船一检后24小时内发货拉网脱锚钩可选配电磁阀脱钩器款【电压】：7.4V大",
+      "price": 220.0,
+      "url": "https://www.goofish.com/item?id=1071473089980&categoryId=126856681",
+      "seller": "河南",
+      "snippet": "7.4V打窝船标准版【定速巡航】 赠送运费险 无忧售后工厂直发包邮 打窝船终身维修专人一船一检后24小时内发货拉网脱锚钩可选配电磁阀脱钩器款【电压】：7.4V大功率【电机】：395型号【有刷】【电池】：12000毫安【尺寸】：490x270",
+      "score": 0.633,
+      "quality_tags": [
+        "v7-real",
+        "verified"
+      ],
+      "final_score": 0.605,
+      "score_breakdown": {
+        "keyword": 0.8,
+        "price": 0.7,
+        "credit": 0.5,
+        "quality": 0.4
+      }
+    },
+    "rationale": "综合评分 0.605，基于 4 维度加权（关键词/价格/信用/质量），信心度 0.80。",
+    "dissenting_opinions": [],
+    "confidence": 0.8
+  },
+  {
+    "decision_id": "D017",
+    "timestamp": "2026-08-13T18:09:53.606181",
+    "task_id": "A03",
+    "phase": "Phase 1",
+    "role": "Integrator",
+    "context_snapshot": "Explorer 收集 5 个商品，Auditor 报告 5 个问题",
+    "options_considered": [
+      {
+        "rank": 1,
+        "title": "ESP32-S3核心板开发板 板载ESP32-S3-N16R 8模组 支持wifi和蓝牙 不带天线底座双核处理器 性能强 支持2.4G Wi-Fi和BT 5（B",
+        "score": 0.605,
+        "source": "xianyu",
+        "rationale": "价格 ¥26.0 · 信用 未知 · 想要数 0 · 来源 xianyu"
+      },
+      {
+        "rank": 2,
+        "title": "全新小智ESP32 S3 N16R8核心板板载1-ESP32 -S3-DevKitC-1模块开发板 未焊排针  28.5元 焊好排针  29元",
+        "score": 0.605,
+        "source": "xianyu",
+        "rationale": "价格 ¥29.0 · 信用 未知 · 想要数 0 · 来源 xianyu"
+      },
+      {
+        "rank": 3,
+        "title": "全新小智ESP32 S3 N16R8核心板板载1-ESP32 -S3-DevKitC-1模块开发板 未焊接款",
+        "score": 0.605,
+        "source": "xianyu",
+        "rationale": "价格 ¥29.0 · 信用 未知 · 想要数 0 · 来源 xianyu"
+      }
+    ],
+    "chosen": {
+      "source_id": "xianyu",
+      "title": "ESP32-S3核心板开发板 板载ESP32-S3-N16R 8模组 支持wifi和蓝牙 不带天线底座双核处理器 性能强 支持2.4G Wi-Fi和BT 5（B",
+      "price": 26.0,
+      "url": "https://www.goofish.com/item?id=1004044317211&categoryId=126856549",
+      "seller": "广东",
+      "snippet": "ESP32-S3核心板开发板 板载ESP32-S3-N16R 8模组 支持wifi和蓝牙 不带天线底座双核处理器 性能强 支持2.4G Wi-Fi和BT 5（BLE）数据传输速率150 Mbps两个Type-C接口 其中一个有COM标记 另",
+      "score": 0.674,
+      "quality_tags": [
+        "v7-real",
+        "verified"
+      ],
+      "final_score": 0.605,
+      "score_breakdown": {
+        "keyword": 0.8,
+        "price": 0.7,
+        "credit": 0.5,
+        "quality": 0.4
+      }
+    },
+    "rationale": "综合评分 0.605，基于 4 维度加权（关键词/价格/信用/质量），信心度 0.80。",
+    "dissenting_opinions": [],
+    "confidence": 0.8
+  },
+  {
+    "decision_id": "D018",
+    "timestamp": "2026-08-13T18:09:53.607738",
+    "task_id": "B05",
+    "phase": "Phase 1",
+    "role": "Integrator",
+    "context_snapshot": "Explorer 收集 5 个商品，Auditor 报告 5 个问题",
+    "options_considered": [
+      {
+        "rank": 1,
+        "title": "船模四叶螺旋桨 锌合金金属桨 正反55mm拉网船打窝船金属螺 旋桨直径55mm  孔4mm价格是一对正反的价格，不议价。全新的库存件，售出不退不换。一共有150",
+        "score": 0.605,
+        "source": "xianyu",
+        "rationale": "价格 ¥43.0 · 信用 未知 · 想要数 0 · 来源 xianyu"
+      },
+      {
+        "rank": 2,
+        "title": "打窝船遥控船拉网船金属螺旋桨锌铝合金螺旋桨 处理直径55mm  孔4mm价格是一对正反的价格，不议价。全新的库存件，售出不退不换。一共有150对",
+        "score": 0.605,
+        "source": "xianyu",
+        "rationale": "价格 ¥43.0 · 信用 未知 · 想要数 0 · 来源 xianyu"
+      },
+      {
+        "rank": 3,
+        "title": "电动船桨 正反2mm 三叶螺旋桨 船桨DIY船模螺旋桨 直径 28/36/42mm",
+        "score": 0.605,
+        "source": "xianyu",
+        "rationale": "价格 ¥8.0 · 信用 未知 · 想要数 0 · 来源 xianyu"
+      }
+    ],
+    "chosen": {
+      "source_id": "xianyu",
+      "title": "船模四叶螺旋桨 锌合金金属桨 正反55mm拉网船打窝船金属螺 旋桨直径55mm  孔4mm价格是一对正反的价格，不议价。全新的库存件，售出不退不换。一共有150",
+      "price": 43.0,
+      "url": "https://www.goofish.com/item?id=983630636348&categoryId=126856935",
+      "seller": "湖北",
+      "snippet": "船模四叶螺旋桨 锌合金金属桨 正反55mm拉网船打窝船金属螺 旋桨直径55mm  孔4mm价格是一对正反的价格，不议价。全新的库存件，售出不退不换。一共有150对",
+      "score": 0.629,
+      "quality_tags": [
+        "v7-real",
+        "verified"
+      ],
+      "final_score": 0.605,
+      "score_breakdown": {
+        "keyword": 0.8,
+        "price": 0.7,
+        "credit": 0.5,
+        "quality": 0.4
+      }
+    },
+    "rationale": "综合评分 0.605，基于 4 维度加权（关键词/价格/信用/质量），信心度 0.80。",
+    "dissenting_opinions": [],
+    "confidence": 0.8
   }
 ]

@@ -1,5 +1,5 @@
 """
-roles/integrator.py — TRIOI 革新 1：认知隔离（独立 session）
+roles/integrator.py — 核心创新 1：认知隔离（独立 session）
 
 Integrator = 综合产出角色
 职责：综合 Explorer 素材 + Auditor 审计，写成最终产物
@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)
 
 
 class Integrator:
-    """TRIOI Integrator — 综合产出（独立 session）"""
+    """本项目 Integrator — 综合产出（独立 session）"""
 
     def __init__(self, weights=None):
         self.weights = weights or {
@@ -83,7 +83,7 @@ class Integrator:
                 "audit_summary": audit_summary,
             }
 
-            # TRIOI 革新 3：记录决策日志
+            # 核心创新 3：记录决策日志
             if decision_logger and top_3:
                 decision_logger.log(
                     task_id=task_id,

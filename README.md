@@ -1,10 +1,10 @@
-# 🤖 Sourcing-Agent｜MCP 多源采购 Agent 平台（TRIOI 版）
+# 🤖 Sourcing-Agent｜MCP 多源采购 Agent 平台（工程化版）
 
-> **TRIOI 工程化闭环 + MCP 多源架构 + Agent Harness 哲学** — 把研究/分析/决策类 AI 任务的"群体思维、黑箱、幻觉、合规"四大根本问题，用工程化方法论解决。
+> **工程化闭环方法论 + MCP 多源架构 + Agent Harness 哲学** — 把研究/分析/决策类 AI 任务的"群体思维、黑箱、幻觉、合规"四大根本问题，用工程化方法论解决。
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://www.python.org)
-[![TRIOI](https://img.shields.io/badge/TRIOI-4%E9%98%B6%E6%AE%B5-green.svg)]()
+[![本项目](https://img.shields.io/badge/本项目-4%E9%98%B6%E6%AE%B5-green.svg)]()
 [![MCP](https://img.shields.io/badge/MCP-Compatible-purple.svg)]()
 [![GOAI 2026](https://img.shields.io/badge/GOAI-2026-red.svg)](https://www.goaigroup.com)
 
@@ -14,9 +14,9 @@
 
 ## 🎯 一句话定位
 
-> **Sourcing-Agent = TRIOI 化 MCP 多源采购 Agent**，按 BOM 物料清单自动跨数据源调度搜索，4 维度评分，Top 3 推荐直接推送。
+> **Sourcing-Agent = 工程化 MCP 多源采购 Agent**，按 BOM 物料清单自动跨数据源调度搜索，4 维度评分，Top 3 推荐直接推送。
 
-## 🧬 TRIOI 4 阶段流程（革新核心）
+## 🧬 4 阶段流程（革新核心）
 
 ```
 ┌─────────────────┐  ┌─────────────────┐  ┌─────────────────┐  ┌─────────────────┐
@@ -79,7 +79,7 @@
 ```
 [用户 BOM 输入]
      ↓
-[Master Agent — TRIOI 4 阶段]
+[Master Agent — 4 阶段]
      ↓
 [MCP Registry — 数据源注册表]
      ├─→ 闲鱼 MCP Server（B 级 · 当前实现）
@@ -111,9 +111,9 @@
 /bom-history           # 历史追溯
 ```
 
-## ✨ TRIOI 革新 vs 普通 AI 方法论
+## ✨ 核心创新 vs 普通 AI 方法论
 
-| 维度 | 普通方法论 | TRIOI 革新 | 效果 |
+| 维度 | 普通方法论 | 核心创新 | 效果 |
 |------|-----------|-----------|------|
 | 角色 | 一个 LLM 串行 | **3 独立 session 互不可见** | 解决群体思维 |
 | 质量检查 | 全跑或全不跑 | **拓扑依赖 + fail-fast** | 节省 50% 时间 |
@@ -133,7 +133,7 @@ playwright install chromium
 # 跑 BOM 跑批
 python3 master_agent.py --bom bom_tasks.json
 
-# TRIOI 4 阶段流程（带决策日志 + 门禁报告）
+# 4 阶段流程（带决策日志 + 门禁报告）
 python3 master_agent.py --bom bom_tasks.json --gates NORMAL
 ```
 
@@ -141,8 +141,8 @@ python3 master_agent.py --bom bom_tasks.json --gates NORMAL
 
 ```
 sourcing-agent/
-├── master_agent.py           # TRIOI 4 阶段流程编排
-├── roles/                    # TRIOI 3 角色（认知隔离）
+├── master_agent.py           # 4 阶段流程编排
+├── roles/                    # 本项目 3 角色（认知隔离）
 │   ├── explorer.py           # 数据收集
 │   ├── auditor.py            # 独立审计
 │   └── integrator.py         # 综合产出
@@ -196,7 +196,7 @@ sourcing-agent/
 办赛方：GOAI 组委会 · 魔搭（阿里达摩院）· 蚂蚁集团
 
 **参赛亮点**：
-- TRIOI 4 阶段方法论（AI 任务的工程化闭环）
+- 4 阶段方法论（AI 任务的工程化闭环）
 - MCP 多源架构（每个企业可自主入驻）
 - 5 道门禁（拓扑依赖 DAG）
 - decision-log 决策追溯（可审计）
@@ -211,4 +211,4 @@ sourcing-agent/
 
 ---
 
-<sub>🤖 Sourcing-Agent — TRIOI + MCP + Agent Harness 哲学融合的工程化多源采购 Agent 平台</sub>
+<sub>🤖 Sourcing-Agent — 本项目 + MCP + Agent Harness 哲学融合的工程化多源采购 Agent 平台</sub>

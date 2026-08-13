@@ -1,5 +1,5 @@
 """
-decision_log/logger.py — TRIOI 革新 3：决策追溯
+decision_log/logger.py — 核心创新 3：决策追溯
 
 每个关键决策结构化记录到 decision-log.json
 """
@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 
 
 class DecisionLogger:
-    """TRIOI Decision-log 记录器"""
+    """本项目 Decision-log 记录器"""
 
     def __init__(self, log_file: str = "decision_log/decision-log.json"):
         self.log_file = Path(log_file)

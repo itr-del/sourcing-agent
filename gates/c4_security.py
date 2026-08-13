@@ -1,5 +1,5 @@
 """
-gates/c4_security.py — C4 安全门禁（TRIOI 革新 5：L3 不可绕过）
+gates/c4_security.py — C4 安全门禁（核心创新 5：L3 不可绕过）
 
 目的：防止受限信息泄露
 分级：
@@ -17,7 +17,7 @@ logger = logging.getLogger(__name__)
 
 
 class C4SecurityGate:
-    """C4 安全门禁 — TRIOI 革新 5：L3 不可绕过"""
+    """C4 安全门禁 — 核心创新 5：L3 不可绕过"""
 
     # L3 正则模式
     L3_PATTERNS = {

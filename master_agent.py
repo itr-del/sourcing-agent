@@ -1,5 +1,5 @@
 """
-master_agent.py — TRIOI 4 阶段流程改造版
+master_agent.py — 4 阶段流程改造版
 
 Phase 1: 3 角色并行生成（Explorer/Auditor/Integrator 独立 session）
 Phase 2: 5 道门禁自检（拓扑依赖 DAG）
@@ -25,7 +25,7 @@ logger = logging.getLogger(__name__)
 
 
 class MasterAgent:
-    """TRIOI 化 Master Agent — 4 阶段流程"""
+    """工程化 Master Agent — 4 阶段流程"""
 
     def __init__(self, gate_strictness: str = NORMAL):
         # 3 角色
@@ -50,7 +50,7 @@ class MasterAgent:
 
     async def run(self, bom_items: List[Dict]) -> Dict[str, Any]:
         """
-        TRIOI 4 阶段流程
+        4 阶段流程
 
         Returns:
             {
@@ -163,7 +163,7 @@ async def main():
         {"id": "B05", "name": "螺旋桨保护罩", "kw": "螺旋桨保护罩", "price_range": [50, 150]},
     ]
 
-    print(f"\n🚀 开始 TRIOI 4 阶段流程（{len(sample_bom)} 个任务）...")
+    print(f"\n🚀 开始 4 阶段流程（{len(sample_bom)} 个任务）...")
     result = await agent.run(sample_bom)
 
     print(f"\n📊 结果汇总:")

@@ -1,5 +1,5 @@
 """
-roles/auditor.py — TRIOI 革新 1：认知隔离（独立 session）
+roles/auditor.py — 核心创新 1：认知隔离（独立 session）
 
 Auditor = 独立审计角色
 职责：审计 Explorer 的素材，质疑逻辑、查一致性
@@ -15,7 +15,7 @@ logger = logging.getLogger(__name__)
 
 
 class Auditor:
-    """TRIOI Auditor — 独立审计（独立 session）"""
+    """本项目 Auditor — 独立审计（独立 session）"""
 
     def __init__(self):
         self.findings: List[Dict[str, Any]] = []
@@ -120,7 +120,7 @@ class Auditor:
 
     def security_redact(self, content: str) -> str:
         """
-        TRIOI 革新 5：L3 不可绕过 — 强制脱敏
+        核心创新 5：L3 不可绕过 — 强制脱敏
 
         关键规则：即使调用方说"原样输出"，L3 字段强制脱敏
         """

@@ -1,5 +1,5 @@
 """
-roles/__init__.py — TRIOI 角色包
+roles/__init__.py — 本项目 角色包
 """
 
 from .explorer import Explorer

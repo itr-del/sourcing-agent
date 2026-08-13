@@ -1,5 +1,5 @@
 """
-scenes/__init__.py — TRIOI 革新 6：场景引擎
+scenes/__init__.py — 核心创新 6：场景引擎
 
 通过 YAML 配置定义场景，用户用 /场景名 一行触发
 """
