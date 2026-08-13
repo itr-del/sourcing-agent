@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+.venv
+
+# Secrets — NEVER commit cookies / tokens
+cookies/
+*.json.cookies
+xianyu.json
+.env
+*.key
+
+# Runtime output
+output/
+*.log
+/tmp/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Test artifacts
+test_*.html
+probe_*.py
