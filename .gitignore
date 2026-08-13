@@ -3,31 +3,34 @@ __pycache__/
 *.py[cod]
 *$py.class
 *.so
-.Python
 venv/
 env/
 .venv
 
-# Secrets — NEVER commit cookies / tokens
+# Secrets — NEVER commit
+.env
+*.env
+*.key
+*.pem
+credentials/
+secrets/
+
+# Cookies
 cookies/
 *.json.cookies
-xianyu.json
-.env
-*.key
 
 # Runtime output
 output/
 *.log
-/tmp/
 
-# Editor / OS
-.vscode/
-.idea/
+# OS / Editor
 .DS_Store
 Thumbs.db
+.vscode/
+.idea/
 *.swp
 *.swo
 
 # Test artifacts
-test_*.html
-probe_*.py
+test_*.py
+debug_*.py

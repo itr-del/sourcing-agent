@@ -1,115 +1,191 @@
-# 🛶 xianyu-bom-hunter
+# 🤖 Sourcing-Agent｜面向中小制造企业的 AI 采购工程师
 
-> 闲鱼 BOM 自动化采购 Agent — 按硬件物料清单，每天自动跑闲鱼搜索、4 维度评分、推送 TOP 3 到飞书。
+> **多源采购 Agent 平台 — 通过 MCP 协议接入各企业供应商，让 BOM 物料采购从"手搓找熟人"升级为"Agent 自动跨平台比价"**
 
-为"桨板跟拍船"项目（29 件 BOM）设计，已成功跑通全量搜索 → 评分 → 推送 → 飞书多维表格同步。
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://www.python.org)
+[![MCP](https://img.shields.io/badge/MCP-Compatible-green.svg)](https://modelcontextprotocol.io)
+[![GOAI 2026](https://img.shields.io/badge/GOAI-2026-red.svg)](https://www.goaigroup.com)
 
-## ✨ 核心能力
+[English](README.en.md) ｜ 中文
 
-- 🛒 **闲鱼自动搜索**：Playwright + cookie 注入，无登录墙
-- ⭐ **4 维度智能评分**：关键词匹配 + 价格区间 + 卖家信用 + 商品质量
-- 📊 **TOP 3 推荐**：每件物料挑 3 个最匹配的卖家
-- 💬 **飞书推送**：HTML 报告 + Markdown 摘要 + bitable 同步
-- ⏰ **定时任务**：每日 10:00 自动跑（cronjob）
+---
 
-## 🏆 4 维度评分公式
+## 🎯 一句话定位
+
+> **Sourcing-Agent = 通用 BOM 采购 Agent 平台**，按物料清单（BOM）每天自动跨平台比价，4 维度智能评分，Top 3 推荐直接推送。让中小制造企业也能享受大企业级采购数字化能力。
+
+## 💎 为什么是这个项目？
+
+在中国制造业占全球 **30%**、AI 渗透率仅 **9.6%**（vs 国际平均 34%）的当下，中小企业"手搓到量产"最痛的环节是**采购**——找源慢、比价难、决策无依据、风险不可控。
+
+传统方案要么贵（SAP Ariba 年费 100 万）、要么缺评分（1688）、要么缺 B2B 信用（闲鱼）。**Sourcing-Agent 填补这个空白**。
+
+## ✨ 核心特性
+
+### 🔌 多源采购（MCP 协议 + Agent Talk）
+
+- **当前已实现**：闲鱼 data source（Playwright + cookie 注入）
+- **未来接入**（通过 MCP 协议）：
+  - 1688 MCP Server
+  - 京东工业 MCP Server
+  - 拼多多 MCP Server
+  - 阿里巴巴 B2B MCP Server
+  - 各企业自建 MCP Server
+- **架构**：每个数据源都是一个独立的 MCP adapter，主 Agent 通过统一接口调度
+
+### ⭐ 4 维度智能评分
 
 ```
-final_score = 关键词匹配 × 0.25 + 价格区间 × 0.25 + 卖家信用 × 0.30 + 商品质量 × 0.20
+final_score = 关键词匹配 × 0.25
+            + 价格区间   × 0.25
+            + 卖家信用   × 0.30
+            + 商品质量   × 0.20
 ```
 
-权重说明：
-- **卖家信用 30%**（最重要）
-- **关键词匹配 25%** + **价格区间 25%**
-- **商品质量 20%**（包邮/全新/想要数加权）
+权重依据：**信用 30% 最高**——跨平台采购最大风险源是供应商信用，我们用 AI 把长尾 C2C 信用转化为可量化的采购决策依据。
 
-## 📦 安装
+### 📤 全自动推送
+
+- 飞书消息推送（实时）
+- 飞书多维表格同步（结构化记录）
+- cron 每日 10:00 自动跑批（无需人工）
+- 邮件 / Webhook / 自定义渠道（未来扩展）
+
+### 🛠️ 真实场景验证
+
+已在"桨板跟拍船"硬件项目（29 件 BOM）端到端跑通：
+
+| 指标 | 数据 |
+|------|------|
+| 跑通率 | **100%**（29/29）|
+| 跑批时间 | **5 分钟** |
+| TOP 1 信用分布 | **100% 信用"极好"** |
+| 平均评分 | **0.68** |
+
+## 🏗️ 技术架构
+
+```
+[用户 BOM 输入]
+     ↓
+[Master Agent（任务规划）]
+     ↓
+[MCP Registry]
+     ├─→ 闲鱼 MCP Server（当前实现）
+     ├─→ 1688 MCP Server（未来）
+     ├─→ 京东工业 MCP Server（未来）
+     └─→ ... 更多企业 MCP Server
+     ↓
+[4 维度评分引擎]
+     ↓
+[Top 3 推荐 + 评分依据]
+     ↓
+[飞书推送 + 多维表格]
+     ↓
+[每日 cron 自动运行]
+```
+
+### 当前实现（v0.1）
+
+- ✅ Master Agent（任务规划 + 异常处理）
+- ✅ 闲鱼 MCP adapter（Playwright + cookie 注入）
+- ✅ 4 维度评分引擎（关键词/价格/信用/质量）
+- ✅ 飞书推送（消息 + 多维表格）
+- ✅ cron 定时任务
+
+### 未来规划（v1.0+）
+
+- 🔜 1688 MCP adapter
+- 🔜 京东工业 MCP adapter
+- 🔜 拼多多 MCP adapter
+- 🔜 MCP Registry（动态注册/发现）
+- 🔜 Agent Talk 平台接入（让其他 Agent 调用 Sourcing-Agent）
+
+## 🚀 快速开始
 
 ```bash
-git clone https://github.com/itr-del/xianyu-bom-hunter.git
-cd xianyu-bom-hunter
-pip install playwright httpx
+# 1. 克隆仓库
+git clone https://github.com/itr-del/sourcing-agent.git
+cd sourcing-agent
+
+# 2. 安装依赖
+pip install -r requirements.txt
 playwright install chromium
-```
 
-## 🔑 配置 Cookie（关键！）
+# 3. 配置环境变量
+cp .env.example .env
+# 编辑 .env：填入 FEISHU_APP_ID / SECRET / 数据源凭证
 
-闲鱼搜索需要登录态。**不要把你的 cookie 提交到 git！**（已加入 .gitignore）
+# 4. 准备 BOM
+cp bom_tasks.example.json bom_tasks.json
 
-1. 在 Kiwi Browser / Chrome 安装 Cookie Editor 扩展
-2. 登录 https://www.goofish.com
-3. 导出 cookie 为 JSON 格式
-4. 保存到 `cookies/xianyu.json`
-
-## 🚀 使用
-
-### 单次跑批
-
-```bash
+# 5. 运行跑批
 python3 run_pipeline.py
 ```
 
-### 跑完后推送飞书
-
-```bash
-python3 feishu_push.py
-```
-
-### 同步到飞书多维表格
-
-```bash
-python3 feishu_bitable.py
-```
-
-## 📁 文件结构
+## 📦 文件结构
 
 ```
-xianyu-bom-hunter/
-├── xianyu_search.py      # 主爬虫：Playwright + cookie + 4维度评分
-├── run_pipeline.py        # 调度：multiprocessing Pool + 1路串行 + 3秒间隔
-├── feishu_push.py         # 飞书消息推送（HTML附件 + Markdown摘要）
-├── feishu_bitable.py      # 飞书多维表格 upsert
-├── bom_tasks.json         # 29 件 BOM 物料清单
-├── cookies/
-│   └── xianyu.json        # 闲鱼登录 cookie（gitignore，必须自己填）
-└── output/                # 跑批产物（gitignore）
-    ├── bom_hunt_report.md
-    ├── bom_hunt_report.html
-    └── search_results.json
+sourcing-agent/
+├── master_agent.py          # 主 Agent（任务规划）
+├── run_pipeline.py          # 调度脚本
+├── data_sources/            # 数据源 MCP adapter
+│   ├── base.py              # MCP 数据源基类
+│   ├── registry.py          # 数据源注册表
+│   └── feishu_b_mcp.py      # 闲鱼 MCP adapter（当前实现）
+├── scoring/                 # 评分引擎
+│   └── four_dimension.py    # 4 维度评分
+├── push/                    # 推送层
+│   ├── feishu_message.py    # 飞书消息
+│   └── feishu_bitable.py    # 飞书多维表格
+├── cron/                    # 定时任务
+├── bom_tasks.example.json   # BOM 模板
+├── output/                  # 跑批产物
+└── tests/                   # 测试
 ```
 
-## 🛶 BOM 物料
+## 📚 文档导航
 
-29 件物料，分 3 组：
+- [DEMO.md](docs/DEMO.md) — Demo 视频 + 演示指南
+- [ARCHITECTURE.md](docs/ARCHITECTURE.md) — 详细架构 + MCP 协议设计
+- [ROADMAP.md](docs/ROADMAP.md) — 未来规划
+- [COMPLIANCE.md](docs/COMPLIANCE.md) — 数据合规与边界声明
+- [GOAI_SUBMISSION.md](docs/GOAI_SUBMISSION.md) — GOAI 参赛材料
 
-- **方案 A（7件）**：低成本入门 — 打窝船 + L298N + ESP32-S3 + GPS + 蓝牙 + GoPro5 + 2S 锂电池
-- **方案 B（16件）**：高端进阶 — Pixhawk + 树莓派4B + Coral TPU + GoPro9 + Storm32 云台 + ...
-- **共用（6件）**：B6AC 充电器 + O型圈 + 电烙铁 + 热缩管 + 万用表 + 尼龙扎带
+## 🎯 适用场景
 
-详见 `bom_tasks.json`。
+- 🛶 **桨板/水上运动硬件**（亲历案例）
+- 🤖 **机器人创业团队**
+- 🚁 **无人机硬件项目**
+- 🚗 **智能车/汽车后市场改装**
+- 🥽 **AI 智能眼镜供应链**
+- 🏭 **IoT 设备创业**
+- 🎓 **高校实验室物料采购**
 
-## ⚙️ 核心参数
+## 🔒 边界声明
 
-| 参数 | 值 | 说明 |
-|------|-----|------|
-| 并发数 | 1 | 服务器内存仅 2GB，必须串行 |
-| 请求间隔 | 3秒 | 避开闲鱼风控 |
-| 超时 | 75秒/任务 | 单任务超过 75s 跳过 |
-| 浏览器 | Chromium | headless + 阻塞图片/字体 |
-
-## 🐛 已知坑
-
-1. **不要多路并发** — 2GB 内存服务器会爆 swap
-2. **必须 3 秒间隔** — 闲鱼限流，频繁请求会触发"商品列表加载中"
-3. **cookie 7-30 天失效** — 关键字段：`_m_h5_tk`, `token`, `sid`, `unb`
-4. **v6 卡死 bug** — 长跑可能触发 chromium worker hang，重启即可
+> ⚠️ Sourcing-Agent 是**辅助采购决策的工具**，不替代专业采购人员的判断。
+> - Agent 推荐 ≠ 自动下单（所有决策必须人工确认）
+> - 仅适用公开数据源，不抓取个人隐私
+> - 不适用于金融/医疗/汽车控制/教育评价等高风险场景
+> - 详见 [COMPLIANCE.md](docs/COMPLIANCE.md)
 
 ## 📜 License
 
-MIT
+**MIT License** © 2026 王嘉亿 (itr-del)
 
-## 🙏 致谢
+## 🏆 参赛信息
 
-- [playwright-python](https://github.com/microsoft/playwright-python)
-- [goofish](https://www.goofish.com) — 闲鱼
-- [飞书开放平台](https://open.feishu.cn)
+本项目参加 **GOAI 2026 无界应用 · AI+工业制造赛道**。
+
+办赛方：GOAI 组委会 · 魔搭（阿里达摩院）· 蚂蚁集团
+
+## 📞 联系
+
+- **GitHub**: [@itr-del](https://github.com/itr-del)
+- **项目主页**: https://github.com/itr-del/sourcing-agent
+- **邮箱**: 待提供
+
+---
+
+<sub>🤖 Sourcing-Agent — 让中小制造企业也能享受大企业级采购数字化能力</sub>
