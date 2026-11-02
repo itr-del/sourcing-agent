@@ -212,3 +212,17 @@ sourcing-agent/
 ---
 
 <sub>🤖 Sourcing-Agent — 本项目 + MCP + Agent Harness 哲学融合的工程化多源采购 Agent 平台</sub>
+
+---
+
+## 👤 关于这个项目的我
+
+**我做这个的原因**：买硬件配件要在一个平台上反复搜、比价、看描述，靠人肉一天做不完一张 BOM。
+
+**我负责的部分**：全流程编排（master_agent 四阶段）、多角色分工（explorer / auditor / integrator）、5 道门禁、decision-log 记录、信源分级、4 维度评分引擎、飞书推送。
+
+**技术选择的关键取舍**：用了"三角色 + 门禁 + 决策日志"这套结构，而不是一个 Agent 一路跑到底——因为采购决策最怕的是**看起来合理但依据不可追溯**，门禁和日志是为了让每个结论都能回溯到原始信源。
+
+**做完之后的收获**：在 toB 场景里，**可追溯性比准确率更早成为瓶颈**——这跟我做医保合规驾驶舱时的体会是同一件事。
+
+🔗 相关项目：[MedGuard](https://github.com/itr-del/med-guard) · [全部项目](https://github.com/itr-del)
