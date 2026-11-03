@@ -187,7 +187,7 @@ sourcing-agent/
 
 ## 📜 License
 
-**MIT License** © 2026 王嘉亿 (itr-del)
+**MIT License** © 2026 王嘉楠 (itr-del)
 
 ## 🏆 参赛信息
 
